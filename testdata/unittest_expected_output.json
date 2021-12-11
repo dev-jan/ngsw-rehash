@@ -1,0 +1,75 @@
+{
+  "configVersion": 1,
+  "timestamp": 123456789,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "installMode": "prefetch",
+      "name": "app",
+      "patterns": [],
+      "updateMode": "prefetch",
+      "urls": [
+        "/268.26618bb558a746c5f655.js",
+        "/338.b9d3c889c1dd568e022c.js",
+        "/372.981a24dcf92fab08ebff.js",
+        "/570.2dac9473300a27522739.js",
+        "/738.492f9552489671f4b69d.js",
+        "/favicon.ico",
+        "/index.html",
+        "/main.832d193d824622717e29.js",
+        "/manifest.webmanifest",
+        "/polyfills.7250c7f916bb7c8a8e65.js",
+        "/runtime.082e468890eddd4266a6.js",
+        "/styles.b14b181affaa666c7db3.css"
+      ]
+    },
+    {
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "installMode": "lazy",
+      "name": "assets",
+      "patterns": [],
+      "updateMode": "prefetch",
+      "urls": [
+        "/assets/icons/icon-128x128.png",
+        "/assets/icons/icon-144x144.png",
+        "/assets/icons/icon-152x152.png",
+        "/assets/icons/icon-192x192.png",
+        "/assets/icons/icon-384x384.png",
+        "/assets/icons/icon-512x512.png",
+        "/assets/icons/icon-72x72.png",
+        "/assets/icons/icon-96x96.png",
+        "/assets/webApplicationInjector.js"
+      ]
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/index.html": "ccbf9fec622544f7b1e20cef4a0c188c20b8024e",
+    "/main.js": "d082ae778f3e2371a3be6161e8adac4f8d87c3d1",
+    "/somethingUnchanged.js": "f7a9e24777ec23212c54d7a350bc5bea5477fdbb"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
