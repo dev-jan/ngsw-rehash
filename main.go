@@ -55,7 +55,10 @@ func recreateHashes(ngswConfigPath string) {
 		}
 	}
 	file, _ := json.MarshalIndent(result, "", "  ")
-	_ = ioutil.WriteFile(ngswConfigPath, file, 0644)
+	err = ioutil.WriteFile(ngswConfigPath, file, 0644)
+	if err != nil {
+		log.Fatal("Error while writing ngsw.json file! error: ", err)
+	}
 }
 
 func main() {
