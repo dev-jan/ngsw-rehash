@@ -13,8 +13,19 @@ Image you want to change some of the final dist files of your angular webapp on 
 
 
 ## Example
+Download the binary into your final image using the following statements inside your Dockerfile:
+```
+ADD https://github.com/dev-jan/ngsw-rehash/releases/download/v1.0/ngsw-rehash-linux-x86 /usr/bin/ngsw-rehash
+RUN chmod 644 /usr/bin/ngsw-rehash
+
+# Optionally, check if the hash matches (sha256sum must be installed for this):
+RUN echo "3bbb25c4d4f3f6356167d059d922f5def25fe44c07a629fceb85f8b398796edd /usr/bin/ngsw-rehash" | sha256sum -c -;
+```
+
+You then can use the binary for example in a startup script to dynamically inject
+environment specific values:
 ```bash
-sed "s,BACKEND_URL,https://fancy-api-url.example.com/,g' dist/your-app/index.html
+sed "s,BACKEND_URL,https://fancy-api-url-prod.example.com/,g' dist/your-app/index.html
 ngsw-rehash dist/your-app/ngsw.json
 ```
 
