@@ -16,7 +16,7 @@ Image you want to change some of the final dist files of your angular webapp on 
 Download the binary into your final image using the following statements inside your Dockerfile:
 ```
 ADD https://github.com/dev-jan/ngsw-rehash/releases/download/v1.0/ngsw-rehash-linux-x86 /usr/bin/ngsw-rehash
-RUN chmod 644 /usr/bin/ngsw-rehash
+RUN chmod +x /usr/bin/ngsw-rehash
 
 # Optionally, check if the hash matches (sha256sum must be installed for this):
 RUN echo "3bbb25c4d4f3f6356167d059d922f5def25fe44c07a629fceb85f8b398796edd /usr/bin/ngsw-rehash" | sha256sum -c -;
