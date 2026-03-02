@@ -40,12 +40,13 @@ func recreateHashes(ngswConfigPath string) {
 		if err != nil {
 			log.Fatal("Cannot find file", filename, " from hashtable! ", err)
 		}
-		defer file.Close()
 
 		sha1Hash := sha1.New()
 		if _, err := io.Copy(sha1Hash, file); err != nil {
+			file.Close()
 			log.Fatal("Error while reading file ", filename, ": ", err)
 		}
+		file.Close()
 
 		fileHashSum := fmt.Sprintf("%x", sha1Hash.Sum(nil))
 		if fileHashSum != hash {
