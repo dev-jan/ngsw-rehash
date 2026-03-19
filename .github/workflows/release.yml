@@ -28,7 +28,7 @@ jobs:
       run: shasum -a 256 ngsw-rehash
 
     - name: Upload release artifacts
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: ngsw-rehash-linux-x86
         path: ./ngsw-rehash
